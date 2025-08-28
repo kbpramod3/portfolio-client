@@ -51,3 +51,10 @@ export interface addStock {
   qty: number;
 }
 
+export interface newStock {
+stock: string;
+    ticker: string;
+    qty: number;
+    price: number;
+}
+

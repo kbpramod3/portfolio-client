@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Stock } from "../types";
 
 interface Props {
@@ -13,7 +13,7 @@ export default function AddStockForm({ allStocks, onAdd }: Props) {
   const [price, setPrice] = useState("");
   const [qty, setQty] = useState("");
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!selectedStock || !price || !qty) return;
     onAdd(selectedStock, parseFloat(price), parseInt(qty));
