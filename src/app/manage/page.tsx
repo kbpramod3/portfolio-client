@@ -40,7 +40,7 @@ export default function ManageStocksPage() {
 
   const handleDeleteStock = async (id: string) => {
     await api.portfolio.delete(id);
-    setPortfolio(portfolio.filter(p => p.id !== id));
+    setPortfolio(prev => prev.filter(p => String(p.id) !== String(id)));
   };
 
   const columns: Column<Orders>[] = useMemo(() => [

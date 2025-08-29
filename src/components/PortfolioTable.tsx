@@ -70,6 +70,7 @@ export default function PortfolioTable() {
         }
       }
     };
+    fetchData();
 
     const isMarketHours = () => {
       const now = new Date();
@@ -182,4 +183,4 @@ export default function PortfolioTable() {
       ))}
     </div>
   );
-}
+};
